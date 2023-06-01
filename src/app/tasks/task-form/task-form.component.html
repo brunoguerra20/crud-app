@@ -1,7 +1,10 @@
 <div class="flex col-12 justify-content-center">
   <h2>{{ title }}</h2>
 </div>
-<section id="form">
+<div class="flex col-12">
+  <button pButton pRipple icon="pi pi-arrow-left" class="p-button-secondary ml-2" [routerLink]="['']"></button>
+</div>
+<section class="mt-2">
   <form (ngSubmit)="onSubmit()" #formTask="ngForm">
     <div class="col-12">
       <span class="p-float-label">
@@ -9,10 +12,13 @@
         <label for="float-input">Digite aqui uma tarefa que deseja salvar!</label>
       </span>
     </div>
-    <div class="flex col-12">
-      <button pButton pRipple icon="pi pi-save" class="p-button-success" type="submit" label="Salvar"></button>
-      <button pButton pRipple icon="pi pi-replay" class="p-button-secondary ml-2" label="Cancelar"
-        [routerLink]="['']"></button>
+    <!-- <div class="flex flex-wrap col-12 md:col-6 lg:col-3 justify-content-center ">
+      <button pButton pRipple icon="pi pi-save" class="p-button-success w-full" type="submit" label="Salvar"></button>
+    </div> -->
+
+    <div class="grid flex justify-content-center p-1">
+      <div class="col-12 md:col-6 lg:col-3"> <button pButton pRipple icon="pi pi-save" class="p-button-success w-full"
+          type="submit" label="Salvar"></button></div>
     </div>
   </form>
 </section>
