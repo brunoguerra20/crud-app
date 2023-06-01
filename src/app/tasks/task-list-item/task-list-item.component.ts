@@ -33,18 +33,15 @@ export class TaskListItemComponent implements OnInit {
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
         this.remove(task);
-        console.log('aceitei');
         this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'Voce aceitou' });
       },
       reject: (type: ConfirmEventType) => {
         switch (type) {
           case ConfirmEventType.REJECT:
             this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'Voce rejeitou' });
-            console.log('rejeitei');
             break;
           case ConfirmEventType.CANCEL:
             this.messageService.add({ severity: 'warn', summary: 'Cancelled', detail: 'Voce cancelou' });
-            console.log('cancelei');
             break;
         }
       }
