@@ -8,9 +8,10 @@
 </div>
 
 <div class="flex">
-  <button pButton pRipple icon="pi pi-pencil" class="p-button-primary"
-    [routerLink]="['/edit', task._id]">Editar</button>
+  <button pButton pRipple icon="pi pi-pencil" class="p-button-primary" [routerLink]="['/edit', task._id]"
+    label="Editar"></button>
 </div>
 <div>
-  <button pButton pRipple icon="pi pi-trash" class="p-button-danger ml-2" (click)="confirmDelete(task)">Excluir</button>
+  <button pButton pRipple icon="pi pi-trash" class="p-button-danger ml-2" (click)="confirmDelete(task)"
+    label="Excluir"></button>
 </div>
