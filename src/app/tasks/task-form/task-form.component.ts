@@ -9,7 +9,6 @@ import { TasksService } from '../shared/tasks.service';
   styleUrls: ['./task-form.component.css']
 })
 export class TaskFormComponent implements OnInit {
-
   task: Task = new Task();
   title = 'Nova Tarefa';
 
@@ -20,6 +19,7 @@ export class TaskFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log()
     const id = this.activeRoute.snapshot.paramMap.get('id');
     if (id) {
       this.taskService.getById(id).subscribe(task => {
